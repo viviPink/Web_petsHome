@@ -1,0 +1,49 @@
+body{
+    background-color: #e8d6be;
+    display: center;
+}
+
+.animal-container {
+    text-align: center; 
+}
+
+
+.animal-card {
+    display: inline-block;
+    margin: 20px;
+    padding: 180px 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    color: white; 
+    border-radius: 8px; 
+}
+
+.card1 {
+    background-color: #463d2e; 
+}
+
+.card2 {
+    background-color: #4c848a;
+}
+
+.animal-card img {
+    display: block;
+    margin: 0 auto 10px; 
+    width:200px;
+    height: auto; 
+}
+
+
+/* выпуклка при наведении*/
+.animal-card:hover {
+    
+    transform: scale(1.35); 
+}
+
+.animal-card p {
+    margin: 0; 
+    font-size: 24px; 
+    font-weight: bold; 
+}
+

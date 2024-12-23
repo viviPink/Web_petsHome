@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sobaka.css">
+    <link rel="stylesheet" href="sobakafirst1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Modak&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <p>Pet's home</p>
+        <a href="favorite.php">
+            <img src="bit.png" alt="Favorite Icon" class="fav-icon" /> 
+        </a>
+        <a href="javascript:void(0);" onclick="openModal()">
+            <img src="information.png" alt="Contact Info" class="info-icon" style="cursor: pointer;" />
+        </a>
+
+         <div class="user-menu">
+    <a href="login.html">
+        <img src="account.png" alt="Login Icon" class="login-icon" /> 
+    </a>
+    <div class="dropdown-menu">
+        <?php if (isset($_SESSION['user'])): ?>
+            <a><?php echo htmlspecialchars($_SESSION['user']); ?></a>
+            
+            <a href="exit_sis.php">Выйти</a> 
+            <a href="my_profiles.php">Мои анкеты</a>
+        <?php else: ?>
+            <a href="login.html">Войти</a>
+        <?php endif; ?>
+    </div>
+</div>
+
+<a class="user_namnam"><?php echo htmlspecialchars($_SESSION['user']); ?></a>
+
+
+    </header>
+    
+    
+    <div class="animal-container" style="text-align: center; padding: 50px;">
+        <div class="animal-card card1" onclick="window.location.href='otdati.html'">
+            <img src="otdat.png" alt="Отдать в добрые руки" />
+            <p>Отдать в добрые руки</p>
+        </div>
+        
+        <div class="animal-card card2" onclick="window.location.href='sobaka.php'">
+            <img src="vzat.png" alt="Взять в добрые руки" />
+            <p>Взять в добрые руки</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
